@@ -1,0 +1,6 @@
+@echo off
+echo Building the project...
+mvn clean install -DskipTests
+
+echo Running the application...
+java -jar target\social-media-0.0.1-SNAPSHOT.jar

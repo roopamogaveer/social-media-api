@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "b24bd58b-df56-4092-92b1-bbbab0c14e17",
+		"name": "social-media-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11272514"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Roopa\",\n  \"email\": \"roopa@example.com\",\n  \"password\": \"Roopa123\",\n  \"role\": \"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:7878/api/v1/users/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"roopa@example.com\",\n  \"password\": \"Roopa123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:7878/api/v1/users/authenticate"
+					},
+					"response": []
+				},
+				{
+					"name": "Get user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4OTcxOSwiZXhwIjoxNzUwNDkzMzE5fQ.arPETMA7tInudaLYFnjNXAawbgn5Wx0dx3SLVC8NCrc"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:7878/api/v1/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "All user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4OTcxOSwiZXhwIjoxNzUwNDkzMzE5fQ.arPETMA7tInudaLYFnjNXAawbgn5Wx0dx3SLVC8NCrc"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:7878/api/v1/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4OTcxOSwiZXhwIjoxNzUwNDkzMzE5fQ.arPETMA7tInudaLYFnjNXAawbgn5Wx0dx3SLVC8NCrc"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:7878/api/v1/users/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4ODY4OCwiZXhwIjoxNzUwNDkyMjg4fQ.xNfDPwmn858OMgBOPUUudhFoaDzj8Ocha_azUITss9o"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"content\": \"Happy Yoga day!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:7878/api/v1/posts/"
+					},
+					"response": []
+				},
+				{
+					"name": "All posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4ODY4OCwiZXhwIjoxNzUwNDkyMjg4fQ.xNfDPwmn858OMgBOPUUudhFoaDzj8Ocha_azUITss9o"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:7878/api/v1/posts/"
+					},
+					"response": []
+				},
+				{
+					"name": "Like post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4ODY4OCwiZXhwIjoxNzUwNDkyMjg4fQ.xNfDPwmn858OMgBOPUUudhFoaDzj8Ocha_azUITss9o"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "localhost:7878/api/v1/posts/like/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4ODY4OCwiZXhwIjoxNzUwNDkyMjg4fQ.xNfDPwmn858OMgBOPUUudhFoaDzj8Ocha_azUITss9o"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:7878/api/v1/posts/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Comment on post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4ODY4OCwiZXhwIjoxNzUwNDkyMjg4fQ.xNfDPwmn858OMgBOPUUudhFoaDzj8Ocha_azUITss9o"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment_text\":\"Wish you the same !\",\n    \"post_id\":\"1\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:7878/api/v1/comments/"
+					},
+					"response": []
+				},
+				{
+					"name": "Read comments of a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4ODY4OCwiZXhwIjoxNzUwNDkyMjg4fQ.xNfDPwmn858OMgBOPUUudhFoaDzj8Ocha_azUITss9o"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:7878/api/v1/comments/post/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb29wYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MDQ4ODY4OCwiZXhwIjoxNzUwNDkyMjg4fQ.xNfDPwmn858OMgBOPUUudhFoaDzj8Ocha_azUITss9o"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:7878/api/v1/comments/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
